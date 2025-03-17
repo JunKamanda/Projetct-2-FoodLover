@@ -1,0 +1,531 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(./fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: "MontserratThin";
+    src: url(./fonts/Montserrat-Thin.ttf);
+}
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    text-align: center;
+}
+section{
+    padding: 10px 70px 20px;
+    user-select: none;
+}
+section h2{
+    font-size: 1.7rem;
+    margin: 10px 0 0;
+    color: #000;
+}
+section p{
+    font-size: .8rem;
+    margin: 20px 0 20px;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "MontserratThin";
+    transition: .5s ease-in-out;
+}
+a:hover{
+    color: #ddc700;
+}
+li{
+    list-style: none;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.btns button{
+    padding: 4px 7px;
+    background: #000000;
+    border: 1px solid #fff;
+}
+#readMoreBtn{
+    background: gray;
+}
+.btns button a{
+    text-transform: uppercase;
+}
+.btns button i{
+    border: 1px solid black;
+    margin-left: 4px;
+}
+.food .price, .titlePrice .price{
+    color: #ddc700;
+    font-size: .8rem;
+}
+
+/* WELCOME */
+/* WELCOME */
+#welcome{
+    background: url("./img/home_bg.jpeg") center/cover;
+    min-height: 84vh;
+    position: relative;
+    z-index: 2;
+}
+#welcome::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.4);
+    z-index: -1;
+}
+.header-container .logo_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo_nav .logo{
+    width: 20%;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.logo_nav .nav{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.header-container .main_content{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #fff;
+}
+.main_content h1{
+    font-size: 2rem;
+}
+.main_content h1 span{
+    color: #ddc700;
+}
+
+/* HISTORY */
+/* HISTORY */
+#history{
+    background: #f1f1f1;
+    color: gray;
+}
+.history-container .placesContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: gray;
+    border-radius: 5px;
+    padding: 5px 0px;
+    max-width: 390px;
+    margin: 40px auto 10px;
+}
+.placesContainer button{
+    padding: 10px;
+    font-size: .9rem;
+    border-radius: 5px;
+    border: none;
+    background: #ddc700;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.placesContainer button:hover{
+    background: #000;
+    color: #fff;
+}
+.placesContainer button:first-child{
+    background: #000;
+    color: #fff;
+}
+.history-container .placesPresentation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0 0 0;
+}
+.placesPresentation .placeDescription{
+    width: 60%;
+}
+.placeDescription p{
+    text-align: start;
+    padding: 10px 50px 0 10px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.placesPresentation .placePicture{
+    width: 40%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+.placePicture .pic{
+    width: 400px;
+    height: 250px;
+}
+.placePicture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+.placePicture .pic:hover img{
+    transform: scale(.99);
+}
+
+/* SPECIAL OFFERS */
+/* SPECIAL OFFERS */
+#specialOffers{
+    background: url("./img/offer-background.jpg") center/cover;
+    color: #fff;
+}
+.specialOffers-container h2{
+    color: #ddc700;
+}
+.specialOffersFoods{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 0;
+}
+.specialOffersFoods .food{
+    padding: 5px;
+}
+.food .foodPicture{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.foodPicture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1200px;
+    transition: .5s ease-in-out;
+}
+.food .foodPicture:hover img{
+    transform: rotateZ(20deg);
+}
+.food h3{
+    margin: 12px 0;
+}
+.food p{
+    color: gray;
+    width: 80%;
+    margin: 0 auto 10px;
+}
+.food span{
+    position: relative;
+    margin-right: 5px;
+    color: gray;
+}
+.food span::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: gray;
+    top: 50%;
+    left: 0;
+}
+
+/* SPECIAL MENU */
+/* SPECIAL MENU */
+#specialMenu{
+    background: #f1f1f1;
+}
+.menuFoodsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto 10px;
+    max-width: 900px;
+}
+.menuFoodsContainer .menuFoods{
+    margin: 50px 50px 0 0;
+}
+.menuFoods .menuFood{
+    display: grid;
+    grid-template-columns: 1fr 75%;
+    align-items: center;
+    margin: 0 0 30px;
+}
+.menuFood .foodPicture{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+.menuFood .foodPicture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.menuFood .foodPicture:hover img{
+    transform: rotateZ(20deg);
+}
+.menuFood .foodTitleDescriptionPrice{
+    text-align: start;
+}
+.menuFood .foodTitleDescriptionPrice .titlePrice{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0 7px;
+    border-bottom: 1px dashed rgba(128, 128, 128, 0.288);
+}
+.titlePrice .title{
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+.menuFood .foodTitleDescriptionPrice .description{
+    margin: 10px 0 0;
+    color: gray;
+}
+.specialMenu-container .btns{
+    margin: 0 0 50px;
+}
+
+/* MENU FOOD TYPE */
+/* MENU FOOD TYPE */
+#menuFoodsType{
+    background: url("./img/daytime_bg.jpeg") center/cover;
+}
+.menuFoodsType{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+}
+.menuFoodsType .foodType{
+    padding: 20px 10px;
+    color: #fff;
+}
+.foodType img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.menuFoodsType .foodType:hover img{
+    transform: rotateZ(7deg);
+}
+.foodType .foodTypeTitle{
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+#menuFoodsType .hours{
+    margin: 0;
+    font-size: .7rem;
+    letter-spacing: -.1px;
+}
+
+/* FOOD GALLERY */
+/* FOOD GALLERY */
+#foodGallery{
+    background: url("./img/offer-background.jpg") center/cover;
+    position: relative;
+    height: 70vh;
+}
+.foodGalleryCounterCards{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    width: 75vw;
+    color: #fff;
+    overflow: hidden;
+}
+.foodGalleryCounterCards .counter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: gray;
+}
+.counter img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.counter .count{
+    color: #ddc700;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.foodGalleryCounterCards .foodGalleryCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+.foodGalleryCards .foodGalleryCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 280px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #4b4b4b;
+}
+.foodGalleryCard{
+    position: absolute;
+    top: 50%;
+}
+.foodGalleryCard.un{
+    left: 0;
+}
+.foodGalleryCard.deux{
+    left: 100%;
+}
+.foodGalleryCard.trois{
+    left: 100%;
+}
+.foodGalleryCard.quatre{
+    left: 100%;
+}
+.foodGalleryCard.cinq{
+    left: 100%;
+}
+.foodGalleryCard.un .foodGalleryPicture{
+    background: url("./img/gallery1.jpeg") center/cover;
+    height: 100%;
+}
+.foodGalleryCard.deux .foodGalleryPicture{
+    background: url("./img/gallery2.jpeg") center/cover;
+    height: 100%;
+}
+.foodGalleryCard.trois .foodGalleryPicture{
+    background: url("./img/gallery3.jpeg") center/cover;
+    height: 100%;
+}
+.foodGalleryCard.quatre .foodGalleryPicture{
+    background: url("./img/gallery4.jpeg") center/cover;
+    height: 100%;
+}
+.foodGalleryCard.cinq .foodGalleryPicture{
+    background: url("./img/gallery5.jpeg") center/cover;
+    height: 100%;
+}
+.foodGalleryCard .foodGalleryDescription{
+    margin: 0 10px;
+    color: gray;
+}
+.foodGalleryDescription h2{
+    color: #fff;
+}
+.foodGalleryDescription p{
+    text-align: start;
+}
+.foodGalleryDescription button{
+    width: 100%;
+    padding: 10px;
+    background: #ddc700;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.foodGalleryDescription button:hover{
+    transform: scale(1.01);
+}
+
+/* COMMING SOON */
+/* COMMING SOON */
+#comingSoon{
+    background: #f1f1f1;
+}
+.comingSoon-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 40px 100px 30px;
+}
+.comingSoon-container .adressesWorkingHours h4{
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: #000;
+    margin: 0 0 10px;
+}
+.adresses, .workingHours{
+    text-align: start;
+    color: gray;
+}
+.workingHours{
+    margin: 20px 0 0;
+}
+.adressesWorkingHours div p{
+    margin: 5px 0 ;
+}
+.counterComingSoon h2{
+    text-align: start;
+    margin: 0 0 10px;
+}
+.counterComingSoon .counterDate{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+.counterDate div{
+    background: #4b4b4b;
+    border: 1px solid #ddc700;
+    box-shadow: inset 1px 1px 9px 3px #ddc700;
+    width: 80px;
+    height: 100px;
+}
+.counterDate div p{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0 0;
+}
+.counterDate div span{
+    font-size: .9rem;
+}
+
+/* FOOTER */
+/* FOOTER */
+#footer{
+    background: url("./img/offer-background.jpg");
+}
+.footer-container p{
+    margin: 0;
+    color: #fff;
+    letter-spacing: 1px;
+}
